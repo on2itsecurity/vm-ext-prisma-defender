@@ -22,7 +22,7 @@ resource "azurerm_virtual_machine_extension" "vm_ext" {
   settings = <<SETTINGS
     {
         "fileUris": [
-          "https://raw.githubusercontent.com/RobM83/vm-ext-prisma-defender/master/install.ps1"
+          "https://raw.githubusercontent.com/on2itsecurity/vm-ext-prisma-defender/master/install.ps1"
         ],
         "commandToExecute": "powershell.exe -Command ./install.ps1 -url '${var.CONSOLE_FQDN}' -tenant '${var.TENANT}' -bearer '${var.TOKEN}'"
     }
